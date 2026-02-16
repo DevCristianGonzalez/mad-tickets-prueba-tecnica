@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+
+  /* ===== COLORS ===== */
+  --color-primary: #8F0B1C;
+  --color-primary-dark: #B4061E;
+  --color-text: #18191E;
+  --color-text-muted: #6A6A6A;
+  --color-gray-light: #DFDFDF;
+  --color-bg-soft: #F6F3F1;
+  --color-white: #FFFFFF;
+  --color-black-soft: #17100D;
+
+  /* ===== FONT FAMILIES ===== */
+  --font-main: 'Archivo', sans-serif;
+  --font-expanded: 'Archivo Expanded', sans-serif;
+
+  /* ===== FONT SIZES ===== */
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-28: 28px;
+  --fs-40: 40px;
+  --fs-45: 45px;
+
+}

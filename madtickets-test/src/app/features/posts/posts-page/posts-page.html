@@ -1,0 +1,36 @@
+<div class="container mt-5">
+
+  <!-- FORMULARIO -->
+  <form [formGroup]="filterForm" class="row mb-4 g-3">
+
+    <div class="col-md-6">
+      <input
+        class="form-control"
+        placeholder="Buscar por título"
+        formControlName="title">
+    </div>
+
+    <div class="col-md-3">
+      <input
+        type="number"
+        class="form-control"
+        placeholder="User ID"
+        formControlName="userId">
+    </div>
+
+  </form>
+
+  <!-- GRID RESPONSIVE -->
+  <div class="row">
+
+    <div
+      class="col-xl-3 col-lg-4 col-md-6 mb-4"
+      *ngFor="let post of filteredPosts$ | async; trackBy: trackById">
+
+      <app-card [post]="post"></app-card>
+
+    </div>
+
+  </div>
+
+</div>
