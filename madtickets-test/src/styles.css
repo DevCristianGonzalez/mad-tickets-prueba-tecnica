@@ -131,3 +131,18 @@ a {
   font-size: var(--fs-14);
   flex: 1;
 }
+.section-title {
+  font-family: var(--font-expanded);
+  font-size: var(--fs-28);
+  text-transform: uppercase;
+}
+
+.see-all {
+  font-size: var(--fs-14);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.see-all:hover {
+  text-decoration: underline;
+}

@@ -1,22 +1,31 @@
-<div class="card h-100 shadow-sm border-0">
+<div class="card event-card">
 
-  <img
-    [src]="post.image"
-    class="card-img-top"
-    style="height:200px; object-fit:cover">
+  <img [src]="post.image" />
 
-  <div class="card-body d-flex flex-column">
+  <div class="card-body">
 
-    <h6 class="fw-bold">
+    <h6 class="event-title">
       {{ post.title }}
     </h6>
 
-    <p class="small text-muted flex-grow-1">
-      {{ post.body | slice:0:100 }}...
+    <p class="event-location">
+      Madrid · WiZink Center
     </p>
 
-   <button class="btn-primary-custom">Ver</button>
+    <div class="event-footer">
 
+      <div>
+        <small>Desde</small>
+        <div class="event-price">
+          {{ (post.id * 3) | currency:'EUR':'symbol':'1.0-0' }}
+        </div>
+      </div>
+
+      <button class="btn-primary-custom">
+        QUIERO IR
+      </button>
+
+    </div>
 
   </div>
 

@@ -21,17 +21,15 @@ export class PostsService {
     return this.http.get<any[]>(this.photosUrl);
   }
 
-  getPostsWithImages(): Observable<Post[]> {
-    return combineLatest([
-      this.getPosts(),
-      this.getPhotos()
-    ]).pipe(
-      map(([posts, photos]) =>
-        posts.slice(0, 50).map(post => ({
-          ...post,
-          image: photos[post.id]?.thumbnailUrl
-        }))
-      )
-    );
-  }
+getPostsWithImages(): Observable<Post[]> {
+  return this.getPosts().pipe(
+    map(posts =>
+      posts.slice(0, 20).map(post => ({
+        ...post,
+        image: `/events/event${(post.id % 3) + 1}.png`
+      }))
+    )
+  );
+}
+
 }

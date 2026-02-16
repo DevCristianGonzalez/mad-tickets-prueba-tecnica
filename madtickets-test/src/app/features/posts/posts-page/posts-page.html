@@ -1,46 +1,30 @@
 <div class="container mt-5">
+    <form [formGroup]="filterForm" class="search-box container">
 
-  <!-- FORMULARIO -->
-  <!-- <form [formGroup]="filterForm" class="row mb-4 g-3">
+        <input type="text" placeholder="Buscar evento..." formControlName="title" />
 
-    <div class="col-md-6">
-      <input
-        class="form-control"
-        placeholder="Buscar por título"
-        formControlName="title">
-    </div>
+        <select formControlName="userId">
+            <option value="">Todas las categorías</option>
+            <option value="1">Teatro</option>
+            <option value="2">Música</option>
+            <option value="3">Deporte</option>
+            <option value="4">Cine</option>
+        </select>
 
-    <div class="col-md-3">
-      <input
-        type="number"
-        class="form-control"
-        placeholder="User ID"
-        formControlName="userId">
-    </div>
+    </form>
 
-  </form> -->
+    <section class="container my-5">
 
-  <!-- GRID RESPONSIVE -->
- <section class="container my-5">
-
-  <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2 class="section-title">Eventos destacados</h2>
-    <a class="see-all">Ver todos</a>
-  </div>
-
-  <div class="row g-4">
-
-    @for (post of filteredPosts$ | async; track post.id) {
-
-      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-        <app-card [post]="post"></app-card>
-      </div>
-
-    }
-
-  </div>
-
-</section>
-
-
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="section-title">Eventos destacados</h2>
+            <a class="see-all">Ver todos</a>
+        </div>
+        <div class="row g-4">
+            @for (post of filteredPosts$ | async; track post.id) {
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <app-card [post]="post"></app-card>
+            </div>
+            }
+        </div>
+    </section>
 </div>
