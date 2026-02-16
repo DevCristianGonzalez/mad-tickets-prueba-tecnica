@@ -1,7 +1,7 @@
 <div class="container mt-5">
 
   <!-- FORMULARIO -->
-  <form [formGroup]="filterForm" class="row mb-4 g-3">
+  <!-- <form [formGroup]="filterForm" class="row mb-4 g-3">
 
     <div class="col-md-6">
       <input
@@ -18,19 +18,29 @@
         formControlName="userId">
     </div>
 
-  </form>
+  </form> -->
 
   <!-- GRID RESPONSIVE -->
-  <div class="row">
+ <section class="container my-5">
 
-    <div
-      class="col-xl-3 col-lg-4 col-md-6 mb-4"
-      *ngFor="let post of filteredPosts$ | async; trackBy: trackById">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="section-title">Eventos destacados</h2>
+    <a class="see-all">Ver todos</a>
+  </div>
 
-      <app-card [post]="post"></app-card>
+  <div class="row g-4">
 
-    </div>
+    @for (post of filteredPosts$ | async; track post.id) {
+
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+        <app-card [post]="post"></app-card>
+      </div>
+
+    }
 
   </div>
+
+</section>
+
 
 </div>
