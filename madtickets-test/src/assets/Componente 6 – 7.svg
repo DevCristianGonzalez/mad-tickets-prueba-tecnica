@@ -1,0 +1,12 @@
+<svg id="Componente_6_7" data-name="Componente 6 – 7" xmlns="http://www.w3.org/2000/svg" width="253" height="343" viewBox="0 0 253 343">
+  <g id="Grupo_62" data-name="Grupo 62" transform="translate(-138 -895)" opacity="0">
+    <path id="Trazado_185" data-name="Trazado 185" d="M0,0H253V343H0Z" transform="translate(138 895)" fill="#18191e" opacity="0.6"/>
+    <g id="Componente_4_1" data-name="Componente 4 – 1" transform="translate(196 1038)">
+      <g id="Rectángulo_75" data-name="Rectángulo 75" fill="none" stroke="#fff" stroke-width="2">
+        <rect width="139" height="58" stroke="none"/>
+        <rect x="1" y="1" width="137" height="56" fill="none"/>
+      </g>
+      <text id="Ver" transform="translate(67 36)" fill="#fff" font-size="20" font-family="ArchivoExpanded-SemiBold, Archivo Expanded" font-weight="600"><tspan x="-26" y="0">VER</tspan></text>
+    </g>
+  </g>
+</svg>

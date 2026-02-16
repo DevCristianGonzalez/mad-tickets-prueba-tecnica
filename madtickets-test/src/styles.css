@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 :root {
 
   /* ===== COLORS ===== */
@@ -24,5 +23,111 @@
   --fs-28: 28px;
   --fs-40: 40px;
   --fs-45: 45px;
+}
 
+/* ===== GLOBAL RESET ===== */
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+.btn-primary-custom {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 10px 24px;
+  font-weight: 600;
+  font-size: var(--fs-14);
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--color-primary-dark);
+}
+
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Oscurecer ligeramente imagen */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.65) 0%,
+    rgba(0,0,0,0.3) 40%,
+    rgba(0,0,0,0) 70%
+  );
+}
+
+/* Contenido */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  color: var(--color-white);
+  max-width: 600px;
+}
+
+.hero-small {
+  font-size: var(--fs-14);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-family: var(--font-expanded);
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: var(--fs-16);
+  margin-bottom: 10px;
+}
+.search-container {
+  position: relative;
+  margin-top: -40px;
+  z-index: 10;
+}
+
+.search-box {
+  background: var(--color-white);
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.search-box input,
+.search-box select {
+  border: 1px solid var(--color-gray-light);
+  padding: 10px;
+  font-size: var(--fs-14);
+  flex: 1;
 }
