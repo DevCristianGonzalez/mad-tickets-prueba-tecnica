@@ -31,7 +31,7 @@
             ],
             "server": "src/main.server.ts",
             "outputMode": "static",
-             "baseHref": "/mad-tickets-prueba-tecnica/"
+             "baseHref": "/madtickets-test/"
 
           },
           "configurations": {
