@@ -1,6 +1,6 @@
 {
   "routes": {
-    "/": {},
-    "/posts": {}
+    "/madtickets-test": {},
+    "/madtickets-test/posts": {}
   }
 }
