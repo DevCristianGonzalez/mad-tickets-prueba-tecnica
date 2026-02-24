@@ -21,6 +21,8 @@ export class PostsService {
     return this.http.get<any[]>(this.photosUrl);
   }
 
+
+//Se uso este metodo para obtener las imagnes
 getPostsWithImages(): Observable<Post[]> {
   return this.getPosts().pipe(
     map(posts =>
@@ -31,5 +33,21 @@ getPostsWithImages(): Observable<Post[]> {
     )
   );
 }
+
+
+// Este metodo obtiene las imagenes y los post usando combineLastest
+// getPostsWithImages(): Observable<Post[]> {
+//     return combineLatest([
+//       this.getPosts(),
+//       this.getPhotos()
+//     ]).pipe(
+//       map(([posts, photos]) =>
+//         posts.slice(0, 50).map(post => ({
+//           ...post,
+//           image: photos[post.id]?.thumbnailUrl
+//         }))
+//       )
+//     );
+//   }
 
 }
